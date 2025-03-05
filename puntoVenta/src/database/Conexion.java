@@ -21,7 +21,9 @@ public class Conexion {
     private final String PASSWORD = "luismiguel17";
     
     public Connection connection ;
-    public Conexion(){
+    public static Conexion singleInstance;
+    
+    private Conexion(){
     this.connection = null;
     }
     
@@ -46,7 +48,16 @@ public class Conexion {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
+    
+    public static Conexion getInstance(){
+        if(singleInstance == null){
+            singleInstance = new Conexion();
+        }
+        return singleInstance;
+    }
+
 }
+
 
 
 

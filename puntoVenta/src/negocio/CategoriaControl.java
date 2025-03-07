@@ -16,7 +16,7 @@ import javax.swing.text.html.parser.DTD;
  */
 public class CategoriaControl {
     private final CategoriaDAO DATOS;
-    private Categoria obj;
+    private final Categoria obj;
     public int registrosMostrados;
     private DefaultTableModel tModel;
     public CategoriaControl(){

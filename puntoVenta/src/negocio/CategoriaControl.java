@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package negocio;
+
 import datosDAO.CategoriaDAO;
 import entidades.Categoria;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.html.parser.DTD;
 
 /**
  *
@@ -67,7 +67,10 @@ public class CategoriaControl {
 
     public String actualizar(int id, String nombre, String nombreAnterior, String descripcion) {
 
-        if (nombre.equals(nombreAnterior)) {
+        if (!nombre.equals(nombreAnterior)) {
+            if (DATOS.exist(nombre)) {
+                return "El objeto ya existe";
+            }
             obj.setId(id);
             obj.setNombre(nombre);
             obj.setDescripcion(descripcion);
@@ -77,22 +80,18 @@ public class CategoriaControl {
                 return "Error al actualizar";
             }
         } else {
-            if (DATOS.exist(nombre)) {
-                return "El objeto ya existe";
+            
+
+            obj.setId(id);
+            obj.setNombre(nombre);
+            obj.setDescripcion(descripcion);
+            if (DATOS.update(obj)) {
+                return "Ok";
             } else {
-                obj.setId(id);
-                obj.setNombre(nombre);
-                obj.setDescripcion(descripcion);
-                if (DATOS.exist(nombre)) {
-                    return "El registro ya existe";
-                } else {
-                    return "Error en la actualizacion";
-                }
+                return "Error en la actualización";
             }
-        }
-
+        }    
     }
-
     public String desactivar(int id) {
         if (DATOS.offVariable(id)) {
             return "OK";

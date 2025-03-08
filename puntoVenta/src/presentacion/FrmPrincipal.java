@@ -52,6 +52,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("puntoVenta");
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/images/Almacen.png"))); // NOI18N
         jMenu1.setText("Almacen");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -69,6 +70,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         menuBar.add(jMenu1);
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/images/Compras.png"))); // NOI18N
         jMenu6.setText("Compras");
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -81,6 +83,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         menuBar.add(jMenu6);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/images/Ventas.png"))); // NOI18N
         jMenu2.setText("Ventas");
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -93,6 +96,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         menuBar.add(jMenu2);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/images/Acceso.png"))); // NOI18N
         jMenu3.setText("Acceso");
 
         jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -105,6 +109,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         menuBar.add(jMenu3);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/images/Consultas2.png"))); // NOI18N
         jMenu4.setText("Consultas");
 
         jMenuItem8.setText("Consultas Compras");
@@ -112,6 +117,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         menuBar.add(jMenu4);
 
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/images/Exit.png"))); // NOI18N
         jMenu5.setText("Salir");
         menuBar.add(jMenu5);
 
@@ -125,7 +131,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
         );
 
         pack();
